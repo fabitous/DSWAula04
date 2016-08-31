@@ -32,7 +32,7 @@ public class CardDAO {
         try(PreparedStatement stmt = conn.prepareStatement(insertScript)) {
             stmt.setLong(1, card.getNumber()); 
             stmt.setString(2, card.getBrand());
-            stmt.setDate(3, (Date) card.getValid());
+            stmt.setString(3, card.getValid());
             stmt.execute();
             conn.commit();
             return true;

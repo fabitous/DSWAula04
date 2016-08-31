@@ -16,6 +16,6 @@
             String msg = (String) request.getAttribute("msg");
         %>
        <h1><%=msg%></h1><hr>
-         <a href="managerForm.js">Back</a>
+         <a href="sisfin.html">Back</a>
     </body>
 </html>

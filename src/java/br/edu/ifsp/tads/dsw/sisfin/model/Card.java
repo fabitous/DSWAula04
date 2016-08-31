@@ -13,9 +13,9 @@ import java.util.Date;
 public class Card {
     private long number;
     private String brand;
-    private Date valid;
+    private String valid;
     
-    public Card (long number, String brand, Date valid) {
+    public Card (long number, String brand, String valid) {
         this.number = number;
         this.brand = brand;
         this.valid = valid; 
@@ -37,11 +37,11 @@ public class Card {
         this.brand = brand;
     }
     
-    public Date getValid() {
+    public String getValid() {
         return valid;
     }
 
-    public void setValid(Date valid) {
+    public void setValid(String valid) {
         this.valid = valid;
     }
 }

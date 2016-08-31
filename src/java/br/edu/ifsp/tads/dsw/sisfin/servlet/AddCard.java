@@ -7,7 +7,7 @@ package br.edu.ifsp.tads.dsw.sisfin.servlet;
 
 import br.edu.ifsp.tads.dsw.sisfin.DAO.CardDAO;
 import br.edu.ifsp.tads.dsw.sisfin.model.Card;
-import java.util.Date;
+import java.sql.Date;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -24,7 +24,7 @@ import java.util.logging.Logger;
  *
  * @author fsantos
  */
-@WebServlet(name = "AddCard", urlPatterns = {"/AddCard"})
+@WebServlet(name = "AddCard", urlPatterns = {"/AddCard.do"})
 public class AddCard extends HttpServlet {
 
     /**
@@ -43,9 +43,10 @@ public class AddCard extends HttpServlet {
         
         long number = Long.parseLong(request.getParameter("number"));
         String brand = request.getParameter("brand");
-        SimpleDateFormat formato = new SimpleDateFormat("MM/yyyy");
-        Date valid = formato.parse(request.getParameter("valid"));
-
+        /*SimpleDateFormat formato = new SimpleDateFormat("MM/yyyy");*/
+        /*Date valid = (Date) formato.parse(request.getParameter("valid"));*/
+        String valid = request.getParameter("valid");
+        
         String msgObj = "";
                 
         Card card = new Card(number,brand,valid);

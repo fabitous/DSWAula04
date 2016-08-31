@@ -7,7 +7,7 @@ package br.edu.ifsp.tads.dsw.sisfin.servlet;
 
 import br.edu.ifsp.tads.dsw.sisfin.DAO.TrxnDAO;
 import br.edu.ifsp.tads.dsw.sisfin.model.Trxn;
-import java.util.Date;
+import java.sql.Date;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author fsantos
  */
-@WebServlet(name = "AddTrxn", urlPatterns = {"/AddTrxn"})
+@WebServlet(name = "AddTrxn", urlPatterns = {"/AddTrxn.do"})
 public class AddTrxn extends HttpServlet {
 
     /**
@@ -43,8 +43,7 @@ public class AddTrxn extends HttpServlet {
 
         long cardNumber = Long.parseLong(request.getParameter("cardNumber"));
         int value = Integer.parseInt(request.getParameter("value"));
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = formato.parse(request.getParameter("date"));
+        String date = request.getParameter("date"); 
         
         String msgObj = "";
                 

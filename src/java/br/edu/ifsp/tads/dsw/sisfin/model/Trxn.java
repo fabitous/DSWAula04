@@ -5,7 +5,7 @@
  */
 package br.edu.ifsp.tads.dsw.sisfin.model;
 
-import java.util.Date;
+import java.sql.Date;
 /**
  *
  * @author fsantos
@@ -13,9 +13,9 @@ import java.util.Date;
 public class Trxn {
     private long cardNumber;
     private int value;
-    private Date date;
+    private String date;
 
-    public Trxn (long cardNumber, int value, Date date) {
+    public Trxn (long cardNumber, int value, String date) {
         this.cardNumber = cardNumber;
         this.value = value;
         this.date = date;
@@ -37,11 +37,11 @@ public class Trxn {
         this.value = value;
     }
     
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 }

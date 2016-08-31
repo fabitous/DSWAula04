@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -26,13 +28,13 @@ public class TrxnDAO {
         this.conn = new ConnectionFactory().getConnection();
     }
     
-    public boolean add(Trxn trxn) {
+    public boolean add(Trxn trxn) throws ParseException {
         this.insertScript = "insert into TRXN (cardNumber,value,date) values (?,?,?)";
         
         try(PreparedStatement stmt = conn.prepareStatement(insertScript)) {
             stmt.setLong(1, trxn.getCardNumber()); 
             stmt.setInt(2, trxn.getValue());
-            stmt.setDate(3, (Date) trxn.getDate());
+            stmt.setString(3, trxn.getDate());
             stmt.execute();
             conn.commit();
             return true;
