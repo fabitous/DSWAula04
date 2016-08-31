@@ -9,8 +9,8 @@
        <h1>Modulo: Card</h1><hr>
        <form>
             <a href="addCardForm.jsp">Add</a>
-            <a href="findCardView.jsp">List</a>
-            <a href="listCardView.jsp">Find</a>
+            <a href="listCardForm.jsp">List</a>
+            <a href="findCardForm.jsp">Find</a>
         </form>
             <hr>
         <a href="/WSisFin1/sisfin.html">Back</a>

@@ -11,11 +11,11 @@ import java.util.Date;
  * @author fsantos
  */
 public class Card {
-    private long number;
+    private String number;
     private String brand;
     private String valid;
     
-    public Card (long number, String brand, String valid) {
+    public Card (String number, String brand, String valid) {
         this.number = number;
         this.brand = brand;
         this.valid = valid; 
@@ -25,11 +25,11 @@ public class Card {
         
     }
     
-    public long getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(long number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 

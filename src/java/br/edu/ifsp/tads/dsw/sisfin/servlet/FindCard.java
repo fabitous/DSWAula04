@@ -36,13 +36,11 @@ public class FindCard extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
               
-        long number = Long.parseLong(request.getParameter("number"));
-        String brand = request.getParameter("brand");
+        String number = request.getParameter("number");
         /*SimpleDateFormat formato = new SimpleDateFormat("MM/yyyy");*/
         /*Date valid = (Date) formato.parse(request.getParameter("valid"));*/
-        String valid = request.getParameter("valid");
                        
-        Card card = new Card(number,brand,valid);
+        Card card = new Card(number,"find","find");
         CardDAO dao = new CardDAO();
         
         Card cardFind = dao.find(card);

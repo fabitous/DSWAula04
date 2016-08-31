@@ -41,7 +41,7 @@ public class AddCard extends HttpServlet {
             throws ServletException, IOException, ParseException {
         response.setContentType("text/html;charset=UTF-8");
         
-        long number = Long.parseLong(request.getParameter("number"));
+        String number = request.getParameter("number");
         String brand = request.getParameter("brand");
         /*SimpleDateFormat formato = new SimpleDateFormat("MM/yyyy");*/
         /*Date valid = (Date) formato.parse(request.getParameter("valid"));*/

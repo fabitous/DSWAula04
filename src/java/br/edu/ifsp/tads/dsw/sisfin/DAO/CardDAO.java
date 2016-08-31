@@ -33,7 +33,7 @@ public class CardDAO {
         this.sqlScript = "insert into CARD (number,brand,valid) values (?,?,?)";
         
         try(PreparedStatement stmt = conn.prepareStatement(sqlScript)) {
-            stmt.setLong(1, card.getNumber()); 
+            stmt.setString(1, card.getNumber()); 
             stmt.setString(2, card.getBrand());
             stmt.setString(3, card.getValid());
             stmt.execute();
@@ -45,13 +45,13 @@ public class CardDAO {
         }
     }
     public Card find(Card card) {
-        this.sqlScript = "select top 1 * from CARD where number = ?";
+        this.sqlScript = "select top 1 * from CARD where number like '?'";
         
         try(PreparedStatement stmt = conn.prepareStatement(sqlScript)) {
-            stmt.setLong(1, card.getNumber()); 
+            stmt.setString(1, card.getNumber()); 
             ResultSet res = stmt.executeQuery(sqlScript);
             while (res.next()) {
-                card.setNumber(res.getLong("number"));
+                card.setNumber(res.getString("number"));
                 card.setBrand(res.getString("brand"));
                 card.setValid(res.getString("valid"));
             }
@@ -72,7 +72,7 @@ public class CardDAO {
         try(PreparedStatement stmt = conn.prepareStatement(sqlScript)) { 
             ResultSet res = stmt.executeQuery(sqlScript);
             while (res.next()) {
-                card.setNumber(res.getLong("number"));
+                card.setNumber(res.getString("number"));
                 card.setBrand(res.getString("brand"));
                 card.setValid(res.getString("valid"));
                 cardList.add(card);
