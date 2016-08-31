@@ -20,6 +20,10 @@ public class Trxn {
         this.value = value;
         this.date = date;
     }
+
+    public Trxn() {
+ 
+    }
     
     public long getCardNumber() {
         return cardNumber;

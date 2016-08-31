@@ -20,6 +20,10 @@ public class Card {
         this.brand = brand;
         this.valid = valid; 
     }
+
+    public Card() {
+        
+    }
     
     public long getNumber() {
         return number;
