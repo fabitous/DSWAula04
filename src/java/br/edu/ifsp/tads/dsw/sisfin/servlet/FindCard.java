@@ -50,7 +50,7 @@ public class FindCard extends HttpServlet {
                 request.setAttribute("brand", cardFind.getBrand());
                 request.setAttribute("valid", cardFind.getValid());
                 RequestDispatcher rd;
-                rd = request.getRequestDispatcher("jsp/findCardView.jsp");
+                rd = request.getRequestDispatcher("jsp/cardDetailsView.jsp");
                 rd.forward(request, response);
             }else{
                 RequestDispatcher rd;

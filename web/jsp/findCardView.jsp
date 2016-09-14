@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Card find!</title>
+        <title>Card Details</title>
     </head>
     <body>
-        <h1>Card find:</h1>
+        <h1>Card Details</h1>
         <%
             long number = (long) request.getAttribute("number");
         %>

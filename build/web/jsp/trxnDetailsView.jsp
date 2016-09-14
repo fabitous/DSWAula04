@@ -9,12 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Client Details</title>
+        <title>Transaction Details</title>
     </head>
     <body>
-       <h1>Modulo: Client</h1><hr>
-            <div><b>Name</b>: <%=request.getParameter("name")%> </div>
-            <div><b>Email</b>: ${param.email}</div>
+       <h1>Modulo: Transaction</h1><hr>
+            <div><b>Card number :</b> <%=request.getParameter("carNumber")%> </div>
+            <div><b>Value :</b> ${param.email}</div>
+            <div><b>Date :</b> ${param.email}</div>
         <hr>
         <a href="/WSisFin1/sisfin.html">Back</a>
     </body>

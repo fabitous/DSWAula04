@@ -9,7 +9,8 @@
        <h1>Modulo: Trxn</h1><hr>
        <form>
             <a href="addTrxnForm.jsp">Add</a>
-            <a href="findTrxnView.jsp">List</a>
+            <a href="findTrxnForm.jsp">List</a>
+            <a href="findTrxnForm.jsp">Details</a>
             <a href="listTrxnView.jsp">Find</a>
         </form>
             <hr>

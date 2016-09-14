@@ -9,7 +9,8 @@
        <h1>Modulo: Card</h1><hr>
        <form>
             <a href="addCardForm.jsp">Add</a>
-            <a href="listCardForm.jsp">List</a>
+            <a href="listCardView.jsp">List</a>
+            <a href="cardDetailsForm.jsp">Details</a>
             <a href="findCardForm.jsp">Find</a>
         </form>
             <hr>

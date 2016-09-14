@@ -13,7 +13,7 @@
     </head>
     <body>
        <h1>Modulo: Client</h1><hr>
-            <div><b>Nome</b>: <%=request.getParameter("name")%> </div>
+            <div><b>Name</b>: <%=request.getParameter("name")%> </div>
             <div><b>Email</b>: ${param.email}</div>
         <hr>
         <a href="/WSisFin1/sisfin.html">Back</a>
